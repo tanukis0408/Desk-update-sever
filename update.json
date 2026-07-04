@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "notes": "Первый публичный релиз desk",
+  "pub_date": "2026-07-03T12:00:00Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "SIGNATURE_PLACEHOLDER",
+      "url": "https://github.com/tanukis0408/Desk-update-sever/releases/download/v0.1.0/desk_0.1.0_x64-setup.exe"
+    }
+  }
+}
