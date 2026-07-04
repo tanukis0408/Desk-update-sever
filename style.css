@@ -285,6 +285,125 @@ a { color: inherit; text-decoration: none; }
 .stat-value { font-size: 18px; font-weight: 700; color: #f4f4f5; }
 .stat-label { font-size: 11px; color: #52525b; }
 
+/* Countdown Section */
+
+.countdown-section {
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center; padding: 80px 24px 50px;
+  min-height: 70vh;
+}
+
+.countdown-badge {
+  display: inline-flex; padding: 5px 14px; border-radius: 20px;
+  background: rgba(139, 92, 246, 0.12); color: #a78bfa;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  margin-bottom: 20px;
+}
+
+.countdown-title {
+  font-size: 38px; font-weight: 800; line-height: 1.2;
+  letter-spacing: -0.02em; margin-bottom: 12px;
+  color: #f4f4f5;
+}
+
+.countdown-sub {
+  font-size: 15px; color: #71717a; line-height: 1.6;
+  max-width: 420px; margin-bottom: 48px;
+}
+
+.timer {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 40px;
+}
+
+.timer-block {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 6px;
+}
+
+.timer-num {
+  display: flex; align-items: center; justify-content: center;
+  width: 80px; height: 90px;
+  background: #111113; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  font-size: 38px; font-weight: 700; color: #f4f4f5;
+  letter-spacing: 2px; font-variant-numeric: tabular-nums;
+  transition: border-color 0.3s;
+}
+
+.timer-num:hover { border-color: rgba(255,255,255,0.12); }
+
+.timer-label {
+  font-size: 10px; color: #52525b; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+
+.timer-sep {
+  font-size: 32px; color: #3f3f46;
+  font-weight: 300; margin-top: -22px;
+}
+
+/* Reveal (post-countdown) */
+
+.countdown-reveal {
+  display: none; flex-direction: column; align-items: center;
+  gap: 16px; max-width: 480px; margin-bottom: 24px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+.reveal-divider {
+  width: 40px; height: 2px; border-radius: 1px;
+  background: rgba(139, 92, 246, 0.3);
+  margin-bottom: 8px;
+}
+
+.reveal-icon {
+  color: #a78bfa;
+}
+
+.reveal-title {
+  font-size: 22px; font-weight: 700; color: #f4f4f5;
+}
+
+.reveal-desc {
+  font-size: 13.5px; color: #71717a; line-height: 1.6;
+}
+
+.reveal-features {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  margin-top: 8px;
+}
+
+.rf-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; color: #a1a1aa;
+  padding: 6px 12px; border-radius: 6px;
+  background: #111113; border: 1px solid rgba(255,255,255,0.06);
+}
+
+.reveal-footnote {
+  font-size: 11px; color: #52525b; margin-top: 20px;
+}
+.reveal-footnote a { color: #71717a; text-decoration: underline; text-underline-offset: 2px; }
+.reveal-footnote a:hover { color: #f4f4f5; }
+
+/* Hints */
+
+.countdown-hints {
+  display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;
+  margin-top: 10px;
+}
+
+.hint-line {
+  font-size: 13px; color: #3f3f46; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  transition: color 0.3s;
+}
+.hint-line:hover { color: #71717a; }
+
 /* Footer */
 
 .footer {
@@ -308,4 +427,17 @@ a { color: inherit; text-decoration: none; }
   .nav { display: none; }
   .ss-sidebar, .ss-notelist { display: none; }
   .header { padding: 12px 16px; }
+  .countdown-title { font-size: 26px; }
+  .timer { gap: 4px; }
+  .timer-num { width: 64px; height: 76px; font-size: 28px; }
+  .timer-sep { font-size: 24px; margin-top: -18px; }
+  .countdown-hints { gap: 12px; }
+  .hint-line { font-size: 11px; }
+  .countdown-section { padding: 50px 16px 30px; }
+}
+
+@media (max-width: 400px) {
+  .timer-num { width: 52px; height: 64px; font-size: 22px; }
+  .timer-sep { font-size: 18px; margin-top: -14px; }
+  .timer-label { font-size: 8px; }
 }
